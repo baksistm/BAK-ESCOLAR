@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-blue: #06b6d4; /* cyan-500 equivalent */
+  --color-dark-neon: #083344; /* cyan-950 equivalent */
+  --color-neutral-dark: #0a0a0a;
+  --color-card-bg: #171717;
+}
+
+body {
+  @apply bg-black text-slate-300 antialiased;
+  font-family: var(--font-sans);
+}
+
+.neon-border {
+  @apply border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.1)];
+}
+
+.neon-text {
+  @apply text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)];
+}
+
+.neon-button {
+  @apply bg-cyan-600 text-white px-6 py-2 rounded-lg 
+         hover:bg-cyan-500 transition-all duration-300
+         shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)]
+         font-semibold tracking-wide uppercase text-xs;
+}
+
+.neon-input {
+  @apply bg-black border border-neutral-800 rounded-lg px-4 py-3 focus:border-cyan-500 
+         focus:ring-1 focus:ring-cyan-500 outline-none transition-all text-slate-100 text-sm;
+}
+
+.card-elegant {
+  @apply bg-neutral-900 border border-neutral-800 rounded-2xl p-6 shadow-xl;
+}
+
+.admin-sidebar-btn {
+  @apply p-3 rounded-xl transition-all flex items-center justify-center;
+}
+
+.admin-sidebar-btn.active {
+  @apply text-cyan-400 bg-cyan-950/30 border border-cyan-500/20;
+}
+
+.admin-sidebar-btn.inactive {
+  @apply text-slate-500 hover:text-cyan-400;
+}
